@@ -1,0 +1,18 @@
+@use '../../styles/var.scss';
+@use '../../styles/base.scss';
+
+.apply {
+    padding: 10vw 12vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+
+    .left-content {
+        width: 70%;
+    }
+
+    .right-content {
+        text-align: right;
+    }
+}
