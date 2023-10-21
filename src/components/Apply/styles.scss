@@ -8,8 +8,18 @@
     justify-content: space-between;
     align-items: end;
 
+    @media screen and (max-width: 900px) {
+        padding: 16vw 5vw;
+        flex-direction: column;
+    }
+
     .left-content {
         width: 70%;
+
+        @media screen and (max-width: 900px) {
+            width: 100%;
+            margin-bottom: 4rem;
+        }
     }
 
     .right-content {
