@@ -1,0 +1,73 @@
+
+// Device Media Queries // 
+$mobile: 600px;
+$desktop: 960px;
+
+// Paddings //
+$desktop-padding: 8vw;
+$mobile-padding: 10vw;
+
+// Colors //
+$text-color: black;
+$alt-color: #828282;
+$primary-color: #80D8FF;
+
+// Background Color //
+$inside-background-color: #F3F3F3;
+$outside-background-color: #EBEBEB;
+$background-color: radial-gradient($inside-background-color, $outside-background-color);
+
+// Fonts //
+$heading-font: 'NB International Mono', sans-serif;
+$p-font: "NB International Regular", sans-serif;
+
+
+// Importing Fonts //
+@font-face {
+    font-family: "NB International Mono";
+    src: url("../../assets/fonts/NB-International-Mono.ttf") format("truetype");
+}
+  
+@font-face {
+    font-family: "NB International Regular";
+    src: url("../../assets/fonts/NB-International-Regular.ttf") format("truetype");
+}
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-font;
+}
+
+p {
+    font-family: $p-font;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
