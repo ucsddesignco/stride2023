@@ -1,0 +1,28 @@
+// Device Media Queries //
+$mobile: 600px;
+$desktop: 960px;
+
+// Paddings //
+$desktop-padding: 12vw;
+$mobile-padding: 10vw;
+
+// Colors //
+$primary-color: #4A090B;
+$secondary-color: #FAF1DC;
+
+// Fonts //
+$heading-font: "NB International Mono", sans-serif;
+$subheading-font: "NB International Regular", sans-serif;
+$p-font: "NB International Regular", sans-serif;
+
+
+// Importing Fonts //
+@font-face {
+  font-family: "NB International Mono";
+  src: url("../assets/fonts/NB-International-Mono.ttf");
+}
+
+@font-face {
+  font-family: "NB International Regular";
+  src: url("../assets/fonts/NB-International-Regular-Webfont.ttf");
+}

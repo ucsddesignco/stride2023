@@ -1,0 +1,204 @@
+@import '../../index.scss';
+
+.about-cont {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: visible;
+  .about {
+    background-color: #FAF1DC;
+    padding: 0 6vw 0 6vw;
+    display: flex;
+    flex-direction: column;
+    .text {
+      .header {
+        font-family: $heading-font;
+        font-size: 3rem;
+        color: $text-color;
+        font-weight: lighter;
+        line-height: 3rem;
+        margin-bottom: 1.4rem;
+      }
+      .description {
+        font-family: $p-font;
+        color: $text-color;
+        font-size: 1rem;
+        text-align: justify;
+      }
+      
+
+
+
+    }
+    .ferris-wheel {
+      padding-bottom: 2.5rem;
+    }
+
+    padding-top: 5rem;
+  }
+  
+  .opportunities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #4A090B;
+    width: 100vw;
+    height: auto;
+    padding-bottom: 2rem;
+
+    .domes-mobile {
+      margin-top: -2px;
+    }
+
+    .oppor-title {
+      color: #FAF1DC;
+      margin: 4rem 0 4rem 0;
+      font-family: $p-font;
+      font-weight: normal;
+      font-size: 2rem;
+      
+
+    }
+
+    .items {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        img {
+          width: 50vw;
+          margin-bottom: 1rem;
+        }
+        width: 60vw;
+        height: auto;
+        text-align: center;
+        color: #FAF1DC;
+        font-size: 1.2rem;
+        margin-bottom: 3rem;
+
+      }
+    }
+  }
+
+  .faq {
+    width: 100%;
+    padding: 16vw 6vw 0vw 6vw;
+    .faq-title {
+      font-family: $heading-font;
+      font-weight: lighter;
+      font-size: 2rem;
+      padding-bottom: 6vw;
+      color: #4A090B;
+    }
+
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .about-cont {
+    .about {
+      .text {
+        .header {
+          font-size: 6rem;
+          line-height: 6rem;
+        }
+        .description {
+          font-size: 1.875rem;
+        }
+      }
+    }
+    .opportunities {
+      padding-bottom: 8rem;
+     
+
+      .oppor-title {
+        font-size: 3rem;
+      }
+      .items {
+        .item {
+          width: 44vw;
+          h3 {
+            font-size: 1.875rem;
+            font-weight: normal;
+          }
+          img {
+            width: 40vw;
+            
+          }
+        }
+      }
+    }
+    .faq {
+      .faq-title {
+        font-size: 3.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .about-cont {
+    .about {
+      padding: 10vw 12vw 6vw 12vw;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8vw;
+
+      .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .header {
+          font-size: 4.5vw;
+          line-height: clamp(6rem, 5vw, 10rem);
+          width: 25vw;
+        }
+        .description {
+          font-size: 1.6vw;
+        }
+
+        width: 34vw;
+        height: 30vw;
+      }
+      .ferris-wheel {  
+        width: 34vw;
+      }
+    } 
+    .opportunities {
+      .oppor-title {
+        font-size: 3.5vw;
+      }
+      .items {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12vw;
+        .item {
+          width: 24vw;
+          img {
+            width: 16vw;
+          }
+          h3 {
+            font-size: 2vw;
+          }
+        }
+      }
+    }
+    .faq {
+      .faq-title {
+        font-size: 4vw;
+        width: 60vw;
+      }
+    }
+  }
+  
+}

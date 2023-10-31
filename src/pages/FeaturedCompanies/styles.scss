@@ -1,0 +1,167 @@
+@use '../../styles/var.scss';
+@use '../../styles/base.scss';
+
+.featured {
+    padding: 10vw 12vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 2px;
+
+
+    @media screen and (max-width: 900px) {
+        padding: 16vw 5vw 5vw 5vw;
+        flex-direction: column;
+    }
+}
+
+.left {
+    width: 32vw;
+
+    @media screen and (max-width: 900px) {
+        width: 100%;
+    }
+
+    h1 {
+        margin-bottom: 2rem;
+    }
+    p {
+        text-align: justify;
+    }
+}
+
+.right {
+    img {
+        width: 32vw;
+
+        @media screen and (max-width: 900px) {
+            margin-top: 3rem;
+            width: 90vw;
+        }
+    }
+}
+
+.domes {
+    background-color: var.$primary-color;
+    border: none;
+    height: auto;
+    width: 100vw;
+}
+.domes-mobile {
+    height: auto;
+    
+}
+.domes-desktop {
+    display: none;
+    margin-top: 0px;
+}
+
+.attending {
+    background-color: var.$primary-color;
+    padding: 8vw 4vw;
+
+    @media screen and (max-width: 600px) {
+        padding: 12vw 10vw;
+    }
+
+
+    h2 {
+        margin: 0 -1rem 0 -1rem;
+        font-size: 1.4rem;
+        color: var.$secondary-color;
+        text-align: center;
+        margin-bottom: 5.5rem;
+
+        @media screen and (max-width: 900px) {
+            margin-bottom: 3.5rem;
+        }
+    }
+
+    .companies {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 16vw;
+        gap: 1.5rem;
+
+        
+
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                object-fit: cover;
+            }
+        }
+
+
+        @media screen and (max-width: 768px) {
+            grid-template-columns: 1fr;
+            grid-auto-rows: 300px;
+        }
+
+        @media screen and (max-width: 600px) {
+            grid-template-columns: 1fr;
+            grid-auto-rows: 160px;
+        }
+
+        .item {
+            background-color: var.$secondary-color;
+            width: 100%;
+            justify-self: center;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 12vw 12vw;      
+    }
+}
+
+.apply {
+    padding: 10vw 12vw;
+    display: flex;
+    flex-direction: row;
+}
+
+
+@media screen and (min-width: 768px) {
+    .featured {
+        .left {
+            h1 {
+                font-size: 5.3rem;
+            }
+            p {
+                font-size: 1.875rem;
+            }
+        }
+    }
+
+    .domes-mobile {
+        display: none;
+    }
+    .domes-desktop {
+        height: auto;
+        display: block;
+        margin-top: 0px;
+        object-fit: contain;
+    }
+
+    .attending {
+        h2 {
+            font-size: 2.5rem;
+        }
+    }
+    .companies {
+        gap: 3rem;
+    }
+    
+}
+
+@media screen and (min-width: var.$desktop) {
+    .domes-desktop {
+        width: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
