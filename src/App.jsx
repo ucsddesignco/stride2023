@@ -1,35 +1,65 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './styles/base.scss';
+import './App.scss';
+import HeroText from './components/HeroText/HeroText';
+import HeroSVG from './svgs/HeroSVG/HeroSVG';
+import Clouds from './svgs/Clouds/Clouds';
+import { useEffect } from 'react';
+import Navbar from './components/HeroText/Navbar/Navbar';
 
 function App() {
-  const [count, setCount] = useState(0)
+  
+
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      return;
+    }
+    let lastScrollTop = 0;
+    const heroText = document.querySelector('.hero-text');
+    const heroSVG = document.querySelector('.hero-svg-container');
+    const heroTextRect = heroText.getBoundingClientRect();
+    const heroSVGRect = heroSVG.getBoundingClientRect();
+
+    const combinedHeight = heroSVGRect.height + heroTextRect.height + 75;
+
+    const handleScroll = () => {
+      const hasScrolled = document.documentElement.scrollTop;
+
+      if (hasScrolled > combinedHeight/2) {
+        return;
+      }
+
+      let currScrollTop = window.scrollY;
+      if (currScrollTop > lastScrollTop) {
+        heroText.style.transform = `translateY(${combinedHeight}px)`;
+      } else  {
+        heroText.style.transform = 'translateY(10px)';
+      }
+
+      lastScrollTop = currScrollTop;
+    };
+    document.addEventListener('scroll', handleScroll);
+
+  }, []);
+
+  
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <Navbar />
+      <div className="hero-container">
+        <HeroText />
+        <div className="hero-svg-container">
+          <Clouds />
+          <HeroSVG />
+        </div>
+
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1 style={{padding: '500px 0px'}}>Content</h1>
+
+
+      {/* <TestBoi/> */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;

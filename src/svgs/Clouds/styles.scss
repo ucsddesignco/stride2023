@@ -1,0 +1,54 @@
+.cloud-container {
+  --scale: 0.7;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+
+  @keyframes InitialMoveCloud {
+    0% {
+      transform: translateX(0%) scale(var(--scale));
+      opacity: 0;
+    }
+
+    10% {
+      opacity: 1;
+    }
+    95% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(calc(100% - var(--start-pos))) scale(var(--scale));
+    }
+  }
+
+  @keyframes MoveFullCloud {
+    0% {
+      transform: translateX(calc(-1 * var(--start-pos) - 10%))
+        scale(var(--scale));
+      opacity: 0;
+    }
+
+    10% {
+      opacity: 1;
+    }
+
+    90% {
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateX(calc(100% - var(--start-pos))) scale(var(--scale));
+      opacity: 0;
+    }
+  }
+
+  .cloud {
+    animation: InitialMoveCloud, MoveFullCloud;
+    animation-duration: var(--initial-duration), var(--duration);
+    animation-iteration-count: 1, infinite;
+    animation-delay: 0s, var(--initial-duration);
+    animation-fill-mode: forwards, none;
+    animation-timing-function: linear, linear;
+  }
+}

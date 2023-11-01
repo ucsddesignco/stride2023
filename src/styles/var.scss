@@ -1,0 +1,33 @@
+
+// Device Media Queries // 
+$mobile: 600px;
+$desktop: 960px;
+
+// Paddings //
+$desktop-padding: 8vw;
+$mobile-padding: 10vw;
+
+// Colors //
+$text-color: #4A090B;
+$alt-color: #828282;
+$primary-color: #80D8FF;
+
+// Background Color //
+$inside-background-color: #F3F3F3;
+$outside-background-color: #EBEBEB;
+$background-color: #FAF1DC;
+
+// Importing Fonts //
+@font-face {
+  font-family: "NB International Mono";
+  src: url("../../src/assets/fonts/NB-International-Mono.ttf") format("truetype");
+}
+  
+@font-face {
+    font-family: "NB International Regular";
+    src: url("../../src/assets/fonts/NB-International-Regular.ttf") format("truetype");
+}
+
+// Fonts //
+$heading-font: 'NB International Mono', Arial;
+$p-font: "NB International Regular", sans-serif;
