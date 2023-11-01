@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import NavbarSVG from '../../../svgs/NavbarSVG/NavbarSVG';
+import NavbarSVG from '../../svgs/NavbarSVG/index';
 import './styles.scss';
+import { NavLink } from 'react-router-dom';
 
 export default function Navbar() {
 
@@ -30,20 +31,20 @@ export default function Navbar() {
         </button>
 
         <ul >
-          <li>
-            <a href="">Home</a>
+          <li >
+            <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink>
           </li>
           <li>
-            <a href="">About</a>
+            <NavLink to="/about">About</NavLink>
           </li>
           <li>
-            <a href="">Companies</a>
+            <NavLink to="/companies">Companies</NavLink>
           </li>
           <li>
-            <a href="https://docs.google.com/document/d/18pBI2_xM0AN4_Gdy3LuPqXXy9NISa8Yj3DeDRbeWT-E" target='_blank' rel="noreferrer">Schedule</a>
+            <a to="https://docs.google.com/document/d/18pBI2_xM0AN4_Gdy3LuPqXXy9NISa8Yj3DeDRbeWT-E" target='_blank' rel="noreferrer">Schedule</a>
           </li>
           <li>
-            <a href="">Apply</a>
+            <a to="/">Apply</a>
           </li>
         </ul>
       </div>

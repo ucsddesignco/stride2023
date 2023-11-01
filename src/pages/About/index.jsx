@@ -1,5 +1,4 @@
 import './styles.scss';
-import React from 'react';
 import FerrisWheel from '../../components/FerrisWheel';
 import Domesmobile from '../../assets/domesmobile.svg';
 import Domesdesktop from '../../assets/domesdesktop.svg';

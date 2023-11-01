@@ -1,96 +1,50 @@
-@use "./var";
-
-body {
-  background-color: var.$secondary-color;
-}
-
-* {
-  margin: 0;
-}
-
-h1,
-h2,
-p {
-  color: var.$primary-color;
-}
-
-h1 {
-    font-family: var.$heading-font;
-    font-size: 4rem;
-    line-height: 106%;
-    text-transform: uppercase;
-    font-weight: lighter;
-  
-    @media only screen and (max-width: var.$mobile) {
-      font-size: 3rem;
-    }
-}
-
-h2 {
-    font-family: var.$subheading-font;
-    font-size: 2rem;
-    font-weight: lighter;
-  
-    @media only screen and (max-width: var.$mobile) {
-      font-size: 2rem;
-    }
-}
-
-p {
-    font-family: var.$p-font;
-    font-size: 1.25rem;
-    line-height: 140%;
-  
-    @media only screen and (max-width: var.$mobile) {
-      font-size: 1rem;
-    }
-}
-
-// @use "./var.scss" as *;
 
 
-// *, *::before, *::after {
-//     box-sizing: border-box;
-//   }
-  
-//   * {
-//     margin: 0;
-//   }
-  
-//   body {
-//     line-height: 1.5;
-//     -webkit-font-smoothing: antialiased;
-//     background-color: #FAF1DC;
-//   }
+@use "./var.scss" as *;
 
-//   html, body {
-//     scrollbar-gutter: stable;
-//     overflow-x: hidden;
-//   }
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
   
-//   img, picture, video, canvas, svg {
-//     display: block;
-//     max-width: 100%;
-//   }
+  * {
+    margin: 0;
+  }
   
-//   input, button, textarea, select {
-//     font: inherit;
-//   }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-color: #FAF1DC;
+  }
+
+  html, body {
+    // scrollbar-gutter: stable;
+    overflow-x: hidden;
+  }
   
-//   p, h1, h2, h3, h4, h5, h6 {
-//     overflow-wrap: break-word;
-//   }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
   
-//   h1, h2, h3, h4, h5, h6 {
-//     font-family: $heading-font;
-//     color: $text-color;
-//   }
+  input, button, textarea, select {
+    font: inherit;
+  }
   
-//   p {
-//       font-family: $p-font;
-//       color: $text-color;
-//   }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
   
-//   #root, #__next {
-//     isolation: isolate;
-//   }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-font;
+    color: $primary-color;
+  }
+  
+  p {
+      font-family: $p-font;
+      color: $primary-color;
+  }
+  
+  #root, #__next {
+    isolation: isolate;
+  }

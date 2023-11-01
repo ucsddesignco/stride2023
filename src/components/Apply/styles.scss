@@ -1,72 +1,35 @@
-@use '../../styles/var.scss';
-@use '../../styles/base.scss';
+@use '../../styles/var.scss' as *;
 
 .apply {
-    padding: 10vw 12vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: end;
-    padding: 16vw 5vw;
-      flex-direction: column;
-      .left-content {
-        text-align: left;
-        h1 {
-          font-size: 2rem;
-        }
-      }
-      .right-content {
-        h1 {
-          font-size: 2rem;
-        }
-      }
-    
-    .left-content {
-        width: 70%;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
 
-        @media screen and (max-width: 900px) {
-            width: 100%;
-            margin-bottom: 2rem;
-        }
-    }
-
-    .right-content {
-      display: flex;
-      flex-direction: column;
-      align-items: end;
-      text-align: right;
-      img {
-        width: 40px;
-        height: auto;
-      }
-      .apply-button {
-        background: none;
-        border: none;
-        text-decoration: none;
-      }
-     }
-
-    @media screen and (min-width: 600px) {
-      .left-content {
-        h1 {
-          font-size: 4rem;
-        }
-      }
-      .right-content {
-        h1 {
-          font-size: 4rem;
-        }
-        img {
-          width: 40px;
-          height: auto;
-        }
-      }
-      
-      
-    }
-
-    @media screen and (min-width: 769px) {
-      
+  p {
+    font-family: 'NB International Mono';
+    font-size: calc(24px + 2vw);
+    text-transform: uppercase;
   }
 
+  .left-content {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+
+  .right-content {
+    align-self: flex-end;
+
+    img {
+      margin-left: auto;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 }

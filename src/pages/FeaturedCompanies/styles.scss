@@ -46,7 +46,7 @@
     background-color: var.$primary-color;
     border: none;
     height: auto;
-    width: 100vw;
+    width: 100%;
 }
 .domes-mobile {
     height: auto;
@@ -118,11 +118,6 @@
     }
 }
 
-.apply {
-    padding: 10vw 12vw;
-    display: flex;
-    flex-direction: row;
-}
 
 
 @media screen and (min-width: 768px) {

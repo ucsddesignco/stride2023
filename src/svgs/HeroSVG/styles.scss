@@ -2,14 +2,9 @@
   margin-inline: auto;
   padding-inline: max(calc(5rem + 2vw), calc(10%));
   overflow: visible;
-}
 
-
-@media screen and (max-width: 768px) {
-  .hero-svg-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  @media screen and (max-width: 768px) {
+    padding-inline: 0;
   }
 }
 
@@ -23,13 +18,11 @@
   //   transform: scale(1.15);
   // }
 
-  
   100% {
     transform: translateY(0%);
     opacity: 1;
   }
 }
-
 
 .yellowboi {
   animation-delay: 0.05s;
@@ -72,26 +65,24 @@
 }
 
 .orangeboi {
-  
-
   @keyframes ReadingNewspaper {
     0% {
       transform: translateX(4px);
     }
-  
+
     15% {
       transform: translateX(0px);
     }
-  
+
     30% {
       transform: translateX(4px);
     }
-  
+
     100% {
       transform: translateX(4px);
     }
   }
-  
+
   .eyes {
     animation: ReadingNewspaper 4s infinite forwards;
   }
@@ -101,7 +92,7 @@
   animation-delay: 0.65s;
 }
 
-.pinkboi.boi{
+.pinkboi.boi {
   animation-delay: 0.8s;
 }
 
@@ -113,7 +104,8 @@
 }
 
 @keyframes WindowPopIn {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
     transform: scale(0);
   }
@@ -125,8 +117,9 @@
 }
 
 @keyframes ShowWindowFrame {
-  0%, 100% {
-    opacity: 1
+  0%,
+  100% {
+    opacity: 1;
   }
 }
 
@@ -139,7 +132,6 @@
 .window-orangeboi {
   opacity: 0;
   transform-origin: bottom left;
-  
 }
 
 .window-pinkboi {

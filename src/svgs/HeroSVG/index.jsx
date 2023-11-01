@@ -8,7 +8,6 @@ function HeroSVG() {
 
     const animateWindowOrangeBoi = (interval) => {
       setTimeout(() => {
-        console.log('orange')
         const delay = Math.random() * 2000 + 1000;
         windowOrangeBoi.classList.add('window-boi');
         windowOrangeBoi.addEventListener('animationend', () => {
@@ -22,7 +21,6 @@ function HeroSVG() {
 
     const animateWindowPinkBoi = (interval) => {
       setTimeout(() => {
-        console.log('pink')
         const delay = Math.random() * 2000 + 1000;
         windowPinkBoi.classList.add('window-boi');
         windowPinkBoi.addEventListener('animationend', () => {

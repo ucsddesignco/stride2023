@@ -36,3 +36,40 @@
         }
     }
 }
+
+.apply {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+  
+    p {
+      font-family: 'NB International Mono';
+      font-size: calc(24px + 2vw);
+      text-transform: uppercase;
+  
+    }
+  
+    .left-content {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  
+  
+    .right-content {
+      align-self: flex-end;
+  
+      img {
+        margin-left: auto;
+      }
+  
+      a {
+        text-decoration: none;
+      }
+    }
+  
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      
+    }
+  }
+

@@ -1,7 +1,6 @@
-@import '../../index.scss';
+@use '../../styles/var' as *;
 
 .about-cont {
-  width: 100vw;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -16,14 +15,14 @@
       .header {
         font-family: $heading-font;
         font-size: 3rem;
-        color: $text-color;
+        color: $primary-color;
         font-weight: lighter;
         line-height: 3rem;
         margin-bottom: 1.4rem;
       }
       .description {
         font-family: $p-font;
-        color: $text-color;
+        color: $primary-color;
         font-size: 1rem;
         text-align: justify;
       }
@@ -44,7 +43,7 @@
     flex-direction: column;
     align-items: center;
     background-color: #4A090B;
-    width: 100vw;
+    width: 100%;
     height: auto;
     padding-bottom: 2rem;
 
@@ -146,7 +145,6 @@
 @media screen and (min-width: 769px) {
   .about-cont {
     .about {
-      padding: 10vw 12vw 6vw 12vw;
       display: flex;
       flex-direction: row;
       align-items: center;

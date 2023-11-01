@@ -1,0 +1,7 @@
+.error-container main {
+    height: calc(100vh - calc(5vw + 3rem));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

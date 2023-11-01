@@ -1,5 +1,4 @@
 import './styles.scss';
-import React from "react";
 import Lighthouse from '../../assets/featuredcompanies/lighthouse.svg';
 import Apply from '../../components/Apply';
 
@@ -11,7 +10,6 @@ import Apple from "../../assets/featuredcompanies/companylogos/apple.png"
 import Google from "../../assets/featuredcompanies/companylogos/google.png"
 import Aops from "../../assets/featuredcompanies/companylogos/aops.png"
 import Arup from "../../assets/featuredcompanies/companylogos/arup.svg"
-import Deloitte from "../../assets/featuredcompanies/companylogos/deloitte.png"
 import Illumina from "../../assets/featuredcompanies/companylogos/illumina.png"
 
 const FeaturedCompanies = () => {
@@ -57,9 +55,7 @@ const FeaturedCompanies = () => {
                     <div className='item'>
                         <img src={Aops} />
                     </div>
-                    <div className='item'>
-                        <img src={Deloitte} />
-                    </div>
+
                 </div>
             </div>
 
