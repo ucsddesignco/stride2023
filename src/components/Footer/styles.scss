@@ -1,75 +1,123 @@
-@use '../../styles/var.scss';
+@use '../../styles/var.scss' as *;
 @use '../../styles/base.scss';
 
 .footer-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 3rem 8vw;
-    margin: 0 auto;
-    background-color: var.$primary-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3rem 8vw;
+  margin: 0 auto;
+  background-color: $primary-color;
 
-    @media screen and (max-width: 600px) {
-        .content-2 {
-            display: none;
-        }
-    }
-
-    p {
-        color: var.$secondary-color;
-
-        @media screen and (max-width: 600px) {
-            font-size: 1.25rem;
-        }
-    }
-
-    img {
-        margin: 0 0.5rem;
-    }
-
-    .content-1 {
-        display: flex;
-        flex-direction: row;
-
-        @media screen and (max-width: 600px) {
-            margin: auto;
-        }
-    }
-}
-
-.apply {
-    display: flex;
-    justify-content: space-between;
-    gap: 3rem;
-  
-    p {
-      font-family: 'NB International Mono';
-      font-size: calc(24px + 2vw);
-      text-transform: uppercase;
-  
-    }
-  
-    .left-content {
-      overflow: hidden;
-      white-space: nowrap;
-    }
-  
-  
-    .right-content {
-      align-self: flex-end;
-  
-      img {
-        margin-left: auto;
-      }
-  
-      a {
-        text-decoration: none;
-      }
-    }
-  
-    @media screen and (max-width: 768px) {
-      flex-direction: column;
-      
+  @media screen and (max-width: 600px) {
+    .content-2 {
+      display: none;
     }
   }
 
+  p {
+    color: $secondary-color;
+
+    @media screen and (max-width: 600px) {
+      font-size: 1.25rem;
+    }
+  }
+
+  img {
+    margin: 0 0.5rem;
+  }
+
+  .content-1 {
+    display: flex;
+    flex-direction: row;
+
+    @media screen and (max-width: 600px) {
+      margin: auto;
+    }
+  }
+}
+
+.apply {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  padding-inline: var(--padding);
+  margin-bottom: 8rem;
+
+  p {
+    font-family: 'NB International Mono';
+    font-size: calc(24px + 2vw);
+    text-transform: uppercase;
+    line-height: 1.2em;
+    position: relative;
+  }
+
+  .left-content {
+    @media screen and (max-width: 768px) {
+      overflow: visible;
+      white-space: normal !important;
+      p br {
+        display: none;
+      }
+    }
+  }
+
+  .right-content {
+    text-align: right;
+
+    align-self: flex-end;
+
+    img {
+      margin-left: auto;
+    }
+
+    a {
+      text-decoration: none;
+
+      p {
+        display: inline-block;
+        overflow: hidden;
+        &:after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 0.1em;
+          background-color: $primary-color;
+          opacity: 0;
+          transition: opacity 0.3s, transform 0.3s;
+          transform: translateX(-100%);
+        }
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      p:after {
+        opacity: 1;
+        transform: translateX(0%);
+      }
+
+      @keyframes Levitate {
+        0%, 100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      img {
+        animation: Levitate 1.25s infinite ;
+      }
+    }
+
+    .now-container {
+      display: flex;
+      gap: 3rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}

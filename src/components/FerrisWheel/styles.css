@@ -1,3 +1,3 @@
-svg {
-  display: block;
+.ferris-container {
+  transform: translateY(7px);
 }

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import NavbarSVG from '../../svgs/NavbarSVG/index';
 import './styles.scss';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 export default function Navbar() {
 
@@ -16,9 +16,9 @@ export default function Navbar() {
 
   return (
     <nav>
-      <a href="">
+      <Link to="/">
         <NavbarSVG />
-      </a>
+      </Link>
       <div className="right">
         {/* prettier-ignore */}
         <button aria-expanded={open} className='mobile-button' onClick={() => {setOpen((prev) => {checkOverflow(prev); return !prev})}}>
@@ -31,20 +31,20 @@ export default function Navbar() {
         </button>
 
         <ul >
-          <li >
+          <li onClick={() => setOpen(false)}>
             <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink>
           </li>
-          <li>
+          <li onClick={() => setOpen(false)}>
             <NavLink to="/about">About</NavLink>
           </li>
-          <li>
+          <li onClick={() => setOpen(false)}>
             <NavLink to="/companies">Companies</NavLink>
           </li>
-          <li>
-            <a to="https://docs.google.com/document/d/18pBI2_xM0AN4_Gdy3LuPqXXy9NISa8Yj3DeDRbeWT-E" target='_blank' rel="noreferrer">Schedule</a>
+          <li onClick={() => setOpen(false)}>
+            <a href="https://docs.google.com/document/d/18pBI2_xM0AN4_Gdy3LuPqXXy9NISa8Yj3DeDRbeWT-E" target='_blank' rel="noreferrer">Schedule</a>
           </li>
-          <li>
-            <a to="/">Apply</a>
+          <li onClick={() => setOpen(false)}>
+            <a href="/">Apply</a>
           </li>
         </ul>
       </div>

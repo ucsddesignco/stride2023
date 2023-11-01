@@ -1,10 +1,16 @@
 import { useEffect } from 'react';
 import HeroText from '../../components/HeroText/index';
+import FerrisWheel from '../../components/FerrisWheel';
 import Clouds from '../../svgs/Clouds/index';
 import HeroSVG from '../../svgs/HeroSVG/index';
+import './styles.scss';
+import Lighthouse from '../../components/Lighthouse';
+import { Link } from 'react-router-dom';
 
 function Home() {
   useEffect(() => {
+    document.documentElement.scrollTo(0, 0); 
+    
     if (window.innerWidth < 768) {
       return;
     }
@@ -15,6 +21,8 @@ function Home() {
     const heroSVGRect = heroSVG.getBoundingClientRect();
 
     const combinedHeight = heroSVGRect.height + heroTextRect.height + 75;
+
+    heroSVG.style.marginBottom = `${heroTextRect.height + 75}px`;
 
     const handleScroll = () => {
       const hasScrolled = document.documentElement.scrollTop;
@@ -36,8 +44,7 @@ function Home() {
   }, []);
 
   return (
-    <>
-      {/* <About /> */}
+    <main className="home-page">
       <div className="hero-container">
         <HeroText />
         <div className="hero-svg-container">
@@ -45,17 +52,25 @@ function Home() {
           <HeroSVG />
         </div>
       </div>
-      <div>
-        <div>
-          <h3>What is stride about?</h3>
-          <p>Learn more →</p>
-        </div>
-        <div>
-          <h3>Which companies are attending stride?</h3>
-          <p>Learn more →</p>
+      <div className="content">
+        <div className="card-container">
+          <Link to="/about" className="card">
+            <div className="card-image">
+              <FerrisWheel />
+            </div>
+            <h3>What is stride <br/> about?</h3>
+            <p>Learn more →</p>
+          </Link>
+          <Link to="/companies" className="card">
+            <div className='card-image'>
+              <Lighthouse/>
+            </div>
+            <h3>Which companies are attending stride?</h3>
+            <p>Learn more →</p>
+          </Link>
         </div>
       </div>
-    </>
+    </main>
   );
 }
 

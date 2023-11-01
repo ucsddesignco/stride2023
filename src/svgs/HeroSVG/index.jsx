@@ -18,7 +18,7 @@ function HeroSVG() {
         }, interval)
       }, interval);
     };
-
+    
     const animateWindowPinkBoi = (interval) => {
       setTimeout(() => {
         const delay = Math.random() * 2000 + 1000;

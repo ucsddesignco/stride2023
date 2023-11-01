@@ -15,7 +15,18 @@ $heading-font: "NB International Mono", sans-serif;
 $subheading-font: "NB International Regular", sans-serif;
 $p-font: "NB International Regular", sans-serif;
 
+// Spacing //
+body {
+  --padding: calc(10px + 7vw);
+  // 3rem 10rem
+}
 
+@media screen and (max-width: 768px) {
+  body {
+    --padding: 20px;
+  }
+  
+}
 // Importing Fonts //
 @font-face {
   font-family: "NB International Mono";

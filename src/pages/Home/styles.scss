@@ -1,21 +1,140 @@
-.hero-container {
-  margin-top: 15px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
+@use '../../styles/var' as *;
 
-
-  @media screen and (max-width: 768px) {
+.home-page {
+  .hero-container {
+    margin-top: 15px;
+    position: relative;
     display: flex;
-    flex-direction: column-reverse;
-  }
-}
-.hero-svg-container {
+    flex-direction: column;
 
-  @media screen and (max-width: 768px) {
-    svg {
-        min-width: calc(600px + 30vw);
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column-reverse;
     }
-    // min-height: 549px;
+  }
+
+  .hero-svg-container {
+    @media screen and (max-width: 768px) {
+      svg {
+        min-width: calc(600px + 30vw);
+      }
+    }
+  }
+
+  .content {
+    padding-inline: var(--padding);
+    margin-top: 10rem;
+
+    @media screen  and (max-width: 768px) {
+      margin-top: 5rem;
+      
+    }
+
+    .card-container {
+      display: flex;
+      gap: calc(10px + 8vw);
+      margin-bottom: 10rem;
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        
+      }
+      .card {
+        text-decoration: none;
+        background-color: inherit;
+        text-align: left;
+
+
+        &:hover {
+          cursor: pointer;
+
+          p:after {
+            opacity: 1;
+            transform: translateX(0%);
+          }
+
+          .card-image svg {
+            transform: scale(1.05);
+          }
+        }
+
+
+        .card-image {
+
+          border: 3px solid $primary-color;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          position: relative;
+          overflow: hidden;
+
+
+          svg {
+            transition: transform 0.3s;
+
+            transform: scale(1);
+            height: clamp(175px, 150px + 12vw, 400px);
+
+            @media screen and (max-width: 950px ) {
+              height: clamp(100px, 100px + 15vw, 300px);
+            }
+
+          }
+        }
+
+        h3 {
+          font-size: calc(8px + 1.2vw);
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          margin-top: 1rem;
+          margin-bottom: 2rem;
+        }
+    
+        p {
+          display: inline-block;
+          font-size: calc(5px + 1.1vw);
+          text-align: left;
+          position: relative;
+          overflow: hidden;
+
+          &:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 0.1em;
+            background-color: $primary-color;
+            opacity: 0;
+            transition: opacity 0.3s, transform 0.3s;
+            transform: translateX(-100%);
+          }
+      
+          
+        }
+        
+        @media screen and (max-width: 768px) {
+          .card-image svg {
+            height: clamp(225px, 225px + 12vw, 500px);
+          }
+
+          h3 {
+            font-size: calc(16px + 1.2vw);
+            letter-spacing: 1px;
+
+            br {
+              display: none;
+            }
+          }
+    
+          p {
+            font-size: calc(12px + 1.2vw);
+            text-align: left;
+          }
+          
+        }
+
+        
+        width: 100%;
+      }
+    }
   }
 }

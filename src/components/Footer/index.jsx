@@ -6,23 +6,25 @@ const Footer = () => {
   return (
     <>
       <div className="apply">
-      <div className="left-content">
-        <p>Ready to stride <br/> and meet company <br/>  recruiters?</p>
-      </div>
-      <div className="right-content">
-        <img src={Pointer} />
-        <a
-          className="apply-button"
-          href="https://google.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div className="left-content">
           <p>
-            Apply <br></br> Now →
+            Ready to stride <br /> and meet company <br /> recruiters?
           </p>
-        </a>
+        </div>
+        <div className="right-content">
+          <img src={Pointer} />
+          <a
+            className="apply-button"
+            href="https://google.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <p>Apply</p>
+            <br/>
+            <p>Now →</p>
+          </a>
+        </div>
       </div>
-    </div>
       <div className="footer-container">
         <div className="content-1">
           <p>Made with</p>

@@ -9,14 +9,19 @@ import Iconthree from '../../assets/icons/three.svg';
 
 import Accordion from '../../components/Accordion';
 import AccordionData from '../../faq.json';
+import { useEffect } from 'react';
 
 
 const About = () => {
+  useEffect(() => {
+    document.documentElement.scrollTo(0, 0); 
+}, []);
+
   return (
-    <main className="about-cont">
+    <main className="about-cont"> 
       <div className='about'>
         <div className='text'>
-          <h2 className='header'>ABOUT STRIDE</h2>
+          <h1 className='header'>ABOUT <br/> STRIDE</h1>
           <p className='description'>Stride is a uniquely design-forward career fair aiming to connect aspiring designers with company representatives. Students are encouraged to showcase their work and experience, so we recommend that you bring a physical copy of your resume!</p>
         </div>
         <div className='ferris-wheel'>

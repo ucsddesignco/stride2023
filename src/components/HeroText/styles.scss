@@ -16,14 +16,16 @@
   }
 
   .logistics {
-    h3 {
-      font-size: calc(10px + 1.2vw);
+    h2 {
+      font-size: calc(8px + 1.2vw);
       letter-spacing: 1px;
+      margin-bottom: 3px;
     }
 
     p {
-      font-size: calc(5px + 1.2vw);
+      font-size: calc(5px + 1.1vw);
       text-align: left;
+
     }
   }
 
@@ -41,7 +43,7 @@
     }
 
     .logistics {
-      h3 {
+      h2 {
         font-size: calc(16px + 1.2vw);
         letter-spacing: 1px;
       }
