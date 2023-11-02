@@ -19,7 +19,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <p>Apply</p>
+            <p>Register</p>
             <br/>
             <p>Now →</p>
           </a>
@@ -32,7 +32,7 @@ const Footer = () => {
           <p>by UCSD Design Co</p>
         </div>
         <div className="content-2">
-          <p>hello@ucsddesign.co</p>
+          <a href="mailto:designatucsd@gmail.com">designatucsd@gmail.com</a>
         </div>
       </div>
     </>

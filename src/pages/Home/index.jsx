@@ -22,7 +22,7 @@ function Home() {
 
     const combinedHeight = heroSVGRect.height + heroTextRect.height + 75;
 
-    heroSVG.style.marginBottom = `${heroTextRect.height + 75}px`;
+    heroSVG.style.marginBottom = `${heroTextRect.height + 75 + 75}px`;
 
     const handleScroll = () => {
       const hasScrolled = document.documentElement.scrollTop;

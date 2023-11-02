@@ -1,44 +1,13 @@
 @use '../../styles/var' as *;
 
 .about-cont {
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: visible;
-  .about {
-  padding-inline: var(--padding);
 
-    background-color: #faf1dc;
-    display: flex;
-    flex-direction: column;
-    .text {
-      .header {
-        font-family: $heading-font;
-        font-size: calc(44px + 1.5vw);
-        letter-spacing: 1px;
-        margin-bottom: 3px;
-        white-space: nowrap;
-        color: $primary-color;
-        font-weight: lighter;
-        line-height: 1.2em;
-        margin-bottom: 1.4rem;
-      }
-      .description {
-        font-family: $p-font;
-        color: $primary-color;
-        font-size: calc(12px + 1.1vw);
-
-        text-align: justify;
-      }
-    }
-    .ferris-wheel {
-      padding-bottom: 2.5rem;
-    }
-
-    padding-top: clamp(1rem, calc(5rem - 5vw), 5rem);
-    padding-bottom: clamp(1rem, calc(5rem - 5vw), 5rem);
-  }
+  padding-top: clamp(1rem, calc(5rem - 5vw), 5rem);
+  padding-bottom: clamp(1rem, calc(5rem - 5vw), 5rem);
+  
 
   .opportunities {
     display: flex;
@@ -48,8 +17,6 @@
     width: 100%;
     height: auto;
     padding-bottom: 2rem;
-
-    
 
     .oppor-title {
       color: #faf1dc;
@@ -64,6 +31,8 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      padding-inline: var(--padding);
+      
       .item {
         display: flex;
         align-items: center;
@@ -73,7 +42,7 @@
           max-width: 45vw;
           margin-bottom: 1rem;
         }
-        width: 60vw;
+        flex: 1;
         height: auto;
         text-align: center;
         color: #faf1dc;
@@ -87,49 +56,20 @@
     width: 100%;
     padding: 10rem var(--padding) 10rem var(--padding);
     .faq-title {
+      font-size: calc(32px + 4vw);
       font-family: $heading-font;
       font-weight: lighter;
-      font-size: 2rem;
       padding-bottom: 6vw;
       color: #4a090b;
     }
   }
 }
 
-
-
 @media screen and (min-width: 769px) {
   .about-cont {
     padding-top: clamp(1rem, calc(6.5rem - 5vw), 6.5rem);
     padding-bottom: clamp(1rem, calc(6.5rem - 5vw), 6.5rem);
-    .about {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8vw;
-
-      .text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        .header {
-          font-size: calc(40px + 1.5vw);
-          line-height: 1.2em;
-          width: 25vw;
-        }
-        .description {
-          font-size: calc(5px + 1.1vw);
-
-        }
-
-        width: 34vw;
-        height: 30vw;
-      }
-      .ferris-wheel {
-        width: 34vw;
-      }
-    }
+    
     .opportunities {
       .oppor-title {
         font-size: 3.5vw;
@@ -138,6 +78,8 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        padding-inline: var(--padding);
+        width: 100%;
         gap: 12vw;
         .item {
           max-width: 24vw;
@@ -147,12 +89,13 @@
           h3 {
             font-size: calc(16px + 1vw);
             font-weight: lighter;
-            color: #FAF1DC;
+            color: #faf1dc;
           }
         }
       }
     }
     .faq {
+      padding-inline: calc(var(--padding) + 5vw);
       .faq-title {
         font-size: 4vw;
         width: 60vw;

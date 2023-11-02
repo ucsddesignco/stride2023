@@ -1,6 +1,6 @@
 import './styles.scss';
 import '../../styles/base.scss';
-import Navbar from '../../components/Navbar/Navbar';
+import Navbar from '../../components/Navbar/index';
 import Footer from '../../components/Footer/index';
 import { Outlet } from 'react-router-dom';
 

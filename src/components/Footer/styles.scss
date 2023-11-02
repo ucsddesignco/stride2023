@@ -23,6 +23,13 @@
     }
   }
 
+  a {
+    font: inherit;
+    font-family: $p-font;
+    text-decoration: none;
+    color: $secondary-color;
+  }
+
   img {
     margin: 0 0.5rem;
   }
@@ -41,8 +48,8 @@
   display: flex;
   justify-content: space-between;
   gap: 3rem;
-  padding-inline: var(--padding);
   margin-bottom: 8rem;
+  padding-inline: calc(var(--padding) + 5vw);
 
   p {
     font-family: 'NB International Mono';

@@ -35,16 +35,16 @@ export default function Navbar() {
             <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink>
           </li>
           <li onClick={() => setOpen(false)}>
-            <NavLink to="/about">About</NavLink>
+            <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>About</NavLink>
           </li>
           <li onClick={() => setOpen(false)}>
-            <NavLink to="/companies">Companies</NavLink>
+            <NavLink to="/companies" className={({ isActive }) => isActive ? "active" : ""}>Companies</NavLink>
           </li>
           <li onClick={() => setOpen(false)}>
             <a href="https://docs.google.com/document/d/18pBI2_xM0AN4_Gdy3LuPqXXy9NISa8Yj3DeDRbeWT-E" target='_blank' rel="noreferrer">Schedule</a>
           </li>
-          <li onClick={() => setOpen(false)}>
-            <a href="/">Apply</a>
+          <li className="register-button" onClick={() => setOpen(false)}>
+            <a href="/">Register</a>
           </li>
         </ul>
       </div>

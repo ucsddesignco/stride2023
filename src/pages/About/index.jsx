@@ -10,16 +10,16 @@ import Iconthree from '../../assets/icons/three.svg';
 import Accordion from '../../components/Accordion';
 import AccordionData from '../../faq.json';
 import { useEffect } from 'react';
-
+import PageHeader from '../../components/PageHeader';
 
 const About = () => {
   useEffect(() => {
-    document.documentElement.scrollTo(0, 0); 
-}, []);
+    document.documentElement.scrollTo(0, 0);
+  }, []);
 
   return (
-    <main className="about-cont"> 
-      <div className='about'>
+    <main className="about-cont">
+      {/* <div className='about'>
         <div className='text'>
           <h1 className='header'>ABOUT <br/> STRIDE</h1>
           <p className='description'>Stride is a uniquely design-forward career fair aiming to connect aspiring designers with company representatives. Students are encouraged to showcase their work and experience, so we recommend that you bring a physical copy of your resume!</p>
@@ -27,40 +27,39 @@ const About = () => {
         <div className='ferris-wheel'>
           <FerrisWheel />
         </div>
+      </div> */}
+      <PageHeader
+        headerText={['ABOUT', 'STRIDE']}
+        desc="Stride is a uniquely design-forward career fair aiming to connect aspiring designers with company representatives. Students are encouraged to showcase their work and experience, so we recommend that you bring a physical copy of your resume!"
+        svg={<FerrisWheel />}
+      />
+      <div className="domes">
+        <img src={Domesmobile} className="domes-mobile" />
+        <img src={Domesdesktop} className="domes-desktop" />
       </div>
-      <div className='domes'>
-        <img src={Domesmobile} className='domes-mobile'/>
-        <img src={Domesdesktop} className='domes-desktop'/>
-      </div>
-      <div className='opportunities'>
-        <h4 className='oppor-title'>Opportunities at Stride</h4>
-        <div className='items'>
-          <div className='item'>
-            <img src={Iconone}/>
+      <div className="opportunities">
+        <h4 className="oppor-title">Opportunities at Stride</h4>
+        <div className="items">
+          <div className="item">
+            <img src={Iconone} />
             <h3>Company Info Sessions</h3>
-
           </div>
-          <div className='item'>
-            <img src={Icontwo}/>
+          <div className="item">
+            <img src={Icontwo} />
             <h3>Resume Reviews</h3>
           </div>
-          <div className='item'>
-            <img src={Iconthree}/>
+          <div className="item">
+            <img src={Iconthree} />
             <h3>One on Ones</h3>
           </div>
         </div>
-
-
       </div>
-      <div className='faq'>
-        <h3 className='faq-title'>
-          FREQUENTLY ASKED QUESTIONS
-        </h3>
+      <div className="faq">
+        <h3 className="faq-title">FREQUENTLY ASKED QUESTIONS</h3>
         <Accordion data={AccordionData} />
-         
       </div>
     </main>
   );
-}
+};
 
 export default About;

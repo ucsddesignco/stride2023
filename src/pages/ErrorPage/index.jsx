@@ -1,4 +1,4 @@
-import Navbar from '../../components/Navbar/Navbar';
+import Navbar from '../../components/Navbar/index';
 import './styles.scss';
 
 export default function ErrorPage() {
@@ -7,7 +7,7 @@ export default function ErrorPage() {
       <Navbar />
       <main>
         <h1>Error: Page not found.</h1>
-        <p>Please go back to the home page!</p>
+        <p>Please return to the home page!</p>
       </main>
     </div>
   );

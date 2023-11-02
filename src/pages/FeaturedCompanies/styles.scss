@@ -11,16 +11,24 @@
 
   .featured {
     padding-inline: var(--padding);
-
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8vw;
+    flex-direction: column;
 
-    @media screen and (max-width: 900px) {
-      padding: 16vw 5vw 5vw 5vw;
+    .left {
+      display: flex;
       flex-direction: column;
+      justify-content: center;
+      width: 34vw;
+      height: 30vw;
+    }
+  }
+
+  .right {
+    svg {
+
+      @media screen and (max-width: 900px) {
+        width: 90vw;
+      }
     }
   }
 }
@@ -35,19 +43,10 @@
   h1 {
     margin-bottom: 2rem;
     text-transform: uppercase;
+    line-height: 1.2em;
   }
   p {
     text-align: justify;
-  }
-}
-
-.right {
-  svg {
-    width: 32vw;
-
-    @media screen and (max-width: 900px) {
-      width: 90vw;
-    }
   }
 }
 
@@ -98,8 +97,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 5rem;
       img {
         object-fit: cover;
+        width: 100%;
       }
     }
 

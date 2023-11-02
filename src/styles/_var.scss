@@ -23,7 +23,7 @@ body {
 
 @media screen and (max-width: 768px) {
   body {
-    --padding: 20px;
+    --padding: calc(5px + 7vw);
   }
   
 }
