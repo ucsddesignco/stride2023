@@ -1,0 +1,16 @@
+
+
+@keyframes SunSpin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.navbarSVG {
+    transition: all 0.5s;
+}
+
+.navbarSVG:is(:hover, :focus-visible) {
+    animation: SunSpin 2s linear infinite;
+}
+

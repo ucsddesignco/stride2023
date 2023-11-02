@@ -15,7 +15,18 @@ $heading-font: "NB International Mono", sans-serif;
 $subheading-font: "NB International Regular", sans-serif;
 $p-font: "NB International Regular", sans-serif;
 
+// Spacing //
+body {
+  --padding: calc(10px + 7vw);
+  // 3rem 10rem
+}
 
+@media screen and (max-width: 768px) {
+  body {
+    --padding: calc(5px + 7vw);
+  }
+  
+}
 // Importing Fonts //
 @font-face {
   font-family: "NB International Mono";
@@ -24,5 +35,5 @@ $p-font: "NB International Regular", sans-serif;
 
 @font-face {
   font-family: "NB International Regular";
-  src: url("../assets/fonts/NB-International-Regular-Webfont.ttf");
+  src: url("../assets/fonts/NB-International-Regular.ttf");
 }

@@ -1,0 +1,118 @@
+@use '../../styles/var' as *;
+
+.about-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: clamp(1rem, calc(5rem - 5vw), 5rem);
+  padding-bottom: clamp(1rem, calc(5rem - 5vw), 5rem);
+
+
+
+  .apply{
+    padding-inline: calc(var(--padding) + 5vw);
+  }
+
+  .opportunities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #4a090b;
+    width: 100%;
+    height: auto;
+    padding-bottom: 2rem;
+
+    .oppor-title {
+      color: #faf1dc;
+      margin: 4rem 0 4rem 0;
+      font-family: $p-font;
+      font-weight: normal;
+      font-size: 2rem;
+    }
+
+    .items {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding-inline: var(--padding);
+
+      .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        img {
+          max-width: 45vw;
+          margin-bottom: 1rem;
+        }
+        h3 {
+          color: $secondary-color;
+          font-family: $p-font;
+          font-weight: 400;
+        }
+        flex: 1;
+        height: auto;
+        text-align: center;
+        color: #faf1dc;
+        font-size: 1.2rem;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  .faq {
+    width: 100%;
+    padding: 10rem var(--padding) 10rem var(--padding);
+    .faq-title {
+      font-size: calc(32px + 4vw);
+      font-family: $heading-font;
+      font-weight: lighter;
+      padding-bottom: 6vw;
+      color: #4a090b;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .about-cont {
+    padding-top: clamp(1rem, calc(6.5rem - 5vw), 6.5rem);
+    padding-bottom: clamp(1rem, calc(6.5rem - 5vw), 6.5rem);
+
+    .opportunities {
+      .oppor-title {
+        font-size: 2.5rem;
+        font-weight: 500;
+
+      }
+      .items {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-inline: var(--padding);
+        width: 100%;
+        gap: 12vw;
+        .item {
+          max-width: 24vw;
+          img {
+            max-width: 20vw;
+          }
+          h3 {
+            font-size: calc(16px + 1vw);
+            font-weight: lighter;
+            color: #faf1dc;
+            font-family: $p-font;
+          }
+        }
+      }
+    }
+    .faq {
+      padding-inline: calc(var(--padding) + 5vw);
+      .faq-title {
+        font-size: 4vw;
+        width: 60vw;
+      }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+@use '../../styles/var' as *;
+
+.accordion {
+  border-radius: 4px;
+  margin-bottom: 2px;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.accordion-title {
+  font-weight: 500;
+  font-family: $p-font;
+  color: #49090B;
+  font-size: calc(14px + 1.1vw);
+}
+
+.icon {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+  color: #49090B;
+  font-size: 0.5rem;
+}
+
+.accordion-content {
+  text-align: justify;
+  padding: 1rem 1rem 1.9rem 1rem;
+}
+
+.icon.open {
+  transform: rotate(-180deg);
+}
+
+.accordion-content-enter {
+  max-height: 0;
+  opacity: 0;
+}
+
+.accordion-content-enter-active {
+  max-height: 1000px; /* Adjust the value to control the animation speed */
+  opacity: 1;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.accordion-content-exit {
+  max-height: 1000px;
+  opacity: 1;
+}
+
+.accordion-content-exit-active {
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.accordion-line {
+  border: 0.5px solid #49090B;
+  height: 1px;
+}
+
+@media screen and (min-width: 600px) {
+  .accordion-header {
+    padding: 20px 10px 20px 0;
+    .accordion-title {
+      font-size: 1.875rem;
+    }
+  }
+  .accordion-content {
+    padding: 0rem 0rem 1.9rem 0rem;
+  }
+
+  .icon {
+    font-size: 0.8rem;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+  .accordion-header {
+    .accordion-title {
+      font-size: 1.8vw;
+    }
+  }
+  .accordion-content {
+    p {
+      font-size: 1.5vw;
+    }
+    
+
+  }
+
+}

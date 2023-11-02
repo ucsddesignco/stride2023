@@ -1,0 +1,141 @@
+@use '../../styles/var' as *;
+
+.home-page {
+
+  .apply{
+    padding-inline: calc(var(--padding) + 10vw);
+  }
+
+  .hero-container {
+    margin-top: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  .hero-svg-container {
+    @media screen and (max-width: 768px) {
+      svg {
+        min-width: calc(600px + 30vw);
+      }
+    }
+  }
+
+  .content {
+    padding-inline: calc(var(--padding) + 10vw);
+
+    @media screen and (max-width: 768px) {
+      margin-top: 5rem;
+      padding-inline: var(--padding);
+    }
+
+    hr {
+      border: 2px solid $primary-color;
+      margin: 8rem 0px;
+    }
+
+    .card-container {
+      display: flex;
+      gap: calc(5px + 5vw);
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+      }
+      .card {
+        text-decoration: none;
+        background-color: inherit;
+        text-align: left;
+
+        &:is(:hover, :focus) {
+          cursor: pointer;
+
+          p:after {
+            opacity: 1;
+            transform: translateX(0%);
+          }
+
+          .card-image svg {
+            transform: scale(1.05);
+          }
+        }
+
+        .card-image {
+          border: 3px solid $primary-color;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          position: relative;
+          overflow: hidden;
+          position: relative;
+
+          svg {
+            transition: transform 0.3s;
+            width: 100%;
+            aspect-ratio: 3/2;
+            
+          }
+        }
+
+        h3 {
+          font-size: calc(8px + 1.2vw);
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          margin-top: 1rem;
+          margin-bottom: 2rem;
+        }
+
+        p {
+          display: inline-block;
+          font-size: calc(5px + 1.1vw);
+          text-align: left;
+          position: relative;
+          overflow: hidden;
+
+          &:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 0.1em;
+            background-color: $primary-color;
+            opacity: 0;
+            transition: opacity 0.3s, transform 0.3s;
+            transform: translateX(-100%);
+          }
+        }
+
+        @media screen and (max-width: 768px) {
+          
+          .card-image svg {
+            min-width:300px;
+          }
+
+          .card-image div {
+            display: grid;
+            place-content: center;
+          }
+
+          h3 {
+            font-size: calc(16px + 1.2vw);
+            letter-spacing: 1px;
+
+            br {
+              display: none;
+            }
+          }
+
+          p {
+            font-size: calc(12px + 1.2vw);
+            text-align: left;
+          }
+        }
+
+        width: 100%;
+      }
+    }
+  }
+}

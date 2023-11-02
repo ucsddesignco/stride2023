@@ -1,47 +1,50 @@
-@use "./var";
 
-body {
-  background-color: var.$secondary-color;
-}
 
-* {
-  margin: 0;
-}
+@use "./var.scss" as *;
 
-h1,
-h2,
-p {
-  color: var.$primary-color;
-}
 
-h1 {
-    font-family: var.$heading-font;
-    font-size: 4rem;
-    line-height: 106%;
-    text-transform: uppercase;
-    font-weight: lighter;
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
   
-    @media only screen and (max-width: var.$mobile) {
-      font-size: 3rem;
-    }
-}
-
-h2 {
-    font-family: var.$subheading-font;
-    font-size: 3rem;
-    font-weight: lighter;
+  * {
+    margin: 0;
+  }
   
-    @media only screen and (max-width: var.$mobile) {
-      font-size: 2rem;
-    }
-}
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-color: #FAF1DC;
+  }
 
-p {
-    font-family: var.$p-font;
-    font-size: 1.25rem;
-    line-height: 140%;
+  html, body {
+    // scrollbar-gutter: stable;
+    overflow-x: hidden;
+  }
   
-    @media only screen and (max-width: var.$mobile) {
-      font-size: 1rem;
-    }
-}
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-font;
+    color: $primary-color;
+  }
+  
+  p {
+      font-family: $p-font;
+      color: $primary-color;
+  }
+  
+  #root, #__next {
+    isolation: isolate;
+  }

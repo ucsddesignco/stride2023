@@ -1,0 +1,58 @@
+@use "../../styles/var.scss" as *;
+
+.hero-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: calc(10px + 4vw);
+  transform: translateY(10px);
+  width: 100%;
+  transition: transform 0.8s;
+  z-index: -1;
+  padding-inline: calc(var(--padding) + 10vw);
+
+
+  svg {
+    width: 45%;
+  }
+
+  .logistics {
+    h2 {
+      font-size: calc(8px + 1.2vw);
+      letter-spacing: 1px;
+      margin-bottom: 3px;
+    }
+
+    p {
+      font-size: calc(5px + 1.1vw);
+      text-align: left;
+
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: calc(var(--padding));
+    margin-top: 3rem;
+
+
+    svg {
+      width: 100%;
+    }
+
+    .logistics {
+      h2 {
+        font-size: calc(16px + 1.2vw);
+        letter-spacing: 1px;
+      }
+
+      p {
+        font-size: calc(12px + 1.2vw);
+        text-align: left;
+      }
+    }
+  }
+}

@@ -1,38 +1,46 @@
-@use '../../styles/var.scss';
+@use '../../styles/var.scss' as *;
 @use '../../styles/base.scss';
 
 .footer-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 3rem 8vw;
-    margin: 0 auto;
-    background-color: var.$primary-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3rem 8vw;
+  margin: 0 auto;
+  background-color: $primary-color;
+
+  @media screen and (max-width: 600px) {
+    .content-2 {
+      display: none;
+    }
+  }
+
+  p {
+    color: $secondary-color;
 
     @media screen and (max-width: 600px) {
-        .content-2 {
-            display: none;
-        }
+      font-size: 1.25rem;
     }
+  }
 
-    p {
-        color: var.$secondary-color;
+  a {
+    font: inherit;
+    font-family: $p-font;
+    text-decoration: none;
+    color: $secondary-color;
+  }
 
-        @media screen and (max-width: 600px) {
-            font-size: 1.25rem;
-        }
+  img {
+    margin: 0 0.5rem;
+  }
+
+  .content-1 {
+    display: flex;
+    flex-direction: row;
+
+    @media screen and (max-width: 600px) {
+      margin: auto;
     }
-
-    img {
-        margin: 0 0.5rem;
-    }
-
-    .content-1 {
-        display: flex;
-        flex-direction: row;
-
-        @media screen and (max-width: 600px) {
-            margin: auto;
-        }
-    }
+  }
 }
+

@@ -1,56 +1,68 @@
 import './styles.scss';
-import React from "react";
-import Lighthouse from '../../assets/featured companies/lighthouse.svg';
+
+import Domesmobile from '../../assets/domesmobile.svg';
+import Domesdesktop from '../../assets/domesdesktop.svg';
+
+//Company Images
+import Apple from '../../assets/featuredcompanies/companylogos/apple.png';
+import Google from '../../assets/featuredcompanies/companylogos/google.png';
+import Aops from '../../assets/featuredcompanies/companylogos/aops.png';
+import Arup from '../../assets/featuredcompanies/companylogos/arup.svg';
+import Illumina from '../../assets/featuredcompanies/companylogos/illumina.png';
+import Lighthouse from '../../components/Lighthouse';
+import { useEffect } from 'react';
+import PageHeader from '../../components/PageHeader';
 import Apply from '../../components/Apply';
 
 const FeaturedCompanies = () => {
-    return (
-        <div>
-            <div className='featured'>
-                <div className='left'>
-                    <h1>Featured Companies</h1>
-                    <p>
-                        Our participating companies come from diverse backgrounds, 
-                        representing multiple industries, products, and services. 
-                        Stop by Stride to connect with professionals and learn more 
-                        about internship and full-time opportunities at a wide range 
-                        of companies.
-                    </p>
-                </div> 
-                <div className='right'>
-                    <img src={Lighthouse} />
-                </div>
-            </div>
+  useEffect(() => {
+    document.documentElement.scrollTo(0, 0);
+  }, []);
 
-            <div className='attending'>
-                <h2>Attending Companies</h2>
-                <div className='companies'> 
-                    <div className='item'>
+  return (
+    <main className="featured-container">
+      <PageHeader
+        headerText={['FEATURED', 'COMPANIES']}
+        desc="Our participating companies come from diverse backgrounds,
+        representing multiple industries, products, and services. Stop by
+        Stride to connect with professionals and learn more about internship
+        and full-time opportunities at a wide range of companies."
+        svg={<Lighthouse />}
+      />
+      <div className="domes">
+        <img src={Domesmobile} className="domes-mobile" />
+        <img src={Domesdesktop} className="domes-desktop" />
+      </div>
 
-                    </div>
-                    <div className='item'>
-
-                    </div>
-                    <div className='item'>
-
-                    </div>
-                    <div className='item'>
-
-                    </div>
-                    <div className='item'>
-
-                    </div>
-                    <div className='item'>
- 
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <Apply />
-            </div>
+      <div className="attending">
+        <h2>Attending Companies</h2>
+        <h3>Recruiting & Networking:</h3>
+        <div className="companies">
+          
+          <a href="https://www.arup.com/" className="item" target='_blank' rel="noreferrer">
+            <img src={Arup} />
+          </a>
+          <a href="https://www.illumina.com/" className="item" target='_blank' rel="noreferrer">
+            <img src={Illumina} />
+          </a>
+          <a href="https://artofproblemsolving.com/" className="item" target='_blank' rel="noreferrer">
+            <img src={Aops} />
+          </a>
         </div>
-    )
-}
+        <h3>Networking Only:</h3>
+
+        <div className="companies">
+        <a href="https://www.apple.com/" className="item" target='_blank' rel="noreferrer">
+            <img src={Apple} />
+          </a>
+          <a href="https://about.google/" className="item" target='_blank' rel="noreferrer">
+            <img src={Google} />
+          </a>
+        </div>
+      </div>
+      <Apply/>
+    </main>
+  );
+};
 
 export default FeaturedCompanies;
