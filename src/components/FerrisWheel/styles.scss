@@ -1,0 +1,57 @@
+.ferris-container {
+  width: 100%;
+  transform: translateY(7px);
+
+  --opacity: 0.4;
+
+  @keyframes InitialMoveCloudFerriswheel {
+    0% {
+      transform: translateX(0%) scale(var(--scale));
+      opacity: 0;
+    }
+
+    10% {
+      opacity: var(--opacity);
+    }
+    90% {
+      opacity: var(--opacity);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(calc(110% - var(--start-pos)));
+    }
+  }
+
+  @keyframes MoveFullCloudFerriswheel {
+    0% {
+      transform: translateX(calc(-1 * var(--start-pos) - 30%));
+      opacity: 0;
+    }
+
+    10% {
+      opacity: var(--opacity);
+    }
+
+    90% {
+      opacity: var(--opacity);
+    }
+
+    100% {
+      transform: translateX(calc(125% - var(--start-pos)));
+      opacity: 0;
+    }
+  }
+
+  .cloud {
+    animation: InitialMoveCloudFerriswheel, MoveFullCloudFerriswheel;
+    animation-duration: var(--initial-duration), var(--duration);
+    animation-iteration-count: 1, infinite;
+    animation-delay: 0s, var(--initial-duration);
+    animation-fill-mode: forwards, none;
+    animation-timing-function: linear, linear;
+  }
+
+  #cloud2 {
+    --opacity: 0.7;
+  }
+}

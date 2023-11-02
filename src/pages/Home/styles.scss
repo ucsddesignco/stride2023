@@ -41,7 +41,7 @@
 
     .card-container {
       display: flex;
-      gap: calc(10px + 8vw);
+      gap: calc(5px + 5vw);
 
       @media screen and (max-width: 768px) {
         flex-direction: column;
@@ -71,14 +71,13 @@
           align-items: flex-start;
           position: relative;
           overflow: hidden;
+          position: relative;
 
           svg {
             transition: transform 0.3s;
-            height: clamp(120px, 100px + 12vw, 400px);
-
-            @media screen and (max-width: 950px) {
-              height: clamp(100px, 100px + 15vw, 300px);
-            }
+            width: 100%;
+            aspect-ratio: 3/2;
+            
           }
         }
 
@@ -110,8 +109,14 @@
         }
 
         @media screen and (max-width: 768px) {
+          
           .card-image svg {
-            height: clamp(225px, 225px + 12vw, 500px);
+            min-width:300px;
+          }
+
+          .card-image div {
+            display: grid;
+            place-content: center;
           }
 
           h3 {

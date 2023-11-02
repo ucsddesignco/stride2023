@@ -36,13 +36,9 @@ const FeaturedCompanies = () => {
 
       <div className="attending">
         <h2>Attending Companies</h2>
+        <h3>Recruiting & Networking:</h3>
         <div className="companies">
-          <a href="https://www.apple.com/" className="item" target='_blank' rel="noreferrer">
-            <img src={Apple} />
-          </a>
-          <a href="https://about.google/" className="item" target='_blank' rel="noreferrer">
-            <img src={Google} />
-          </a>
+          
           <a href="https://www.arup.com/" className="item" target='_blank' rel="noreferrer">
             <img src={Arup} />
           </a>
@@ -51,6 +47,16 @@ const FeaturedCompanies = () => {
           </a>
           <a href="https://artofproblemsolving.com/" className="item" target='_blank' rel="noreferrer">
             <img src={Aops} />
+          </a>
+        </div>
+        <h3>Networking Only:</h3>
+
+        <div className="companies">
+        <a href="https://www.apple.com/" className="item" target='_blank' rel="noreferrer">
+            <img src={Apple} />
+          </a>
+          <a href="https://about.google/" className="item" target='_blank' rel="noreferrer">
+            <img src={Google} />
           </a>
         </div>
       </div>

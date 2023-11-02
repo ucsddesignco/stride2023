@@ -1,60 +1,123 @@
 .lighthouse-container {
   transform: translateY(4px);
+  overflow: visible;
+  width: 100%;
+  --scale: 1;
+  --opacity: 0.4;
 
-  svg {
-  }
-  .cloud-container {
-    --scale: 0.7;
-    width: 100%;
-    position: absolute;
-    z-index: 1;
-  
-    @keyframes InitialMoveCloud {
-      0% {
-        transform: translateX(0%) scale(var(--scale));
-        opacity: 0;
-      }
-  
-      10% {
-        opacity: 1;
-      }
-      95% {
-        opacity: 1;
-      }
-      100% {
-        opacity: 0;
-        transform: translateX(calc(100% - var(--start-pos))) scale(var(--scale));
-      }
+
+  // @keyframes Jumping {
+  //   0%, 50%{
+  //     transform: translateY(0px);
+  //   }
+
+  //   20% {
+  //     transform: translateY(-25px);
+  //   }
+
+  // }
+
+  @keyframes Jumping {
+    0%,
+    100% {
+      transform: translateY(0px);
     }
-  
-    @keyframes MoveFullCloud {
-      0% {
-        transform: translateX(calc(-1 * var(--start-pos) - 10%))
-          scale(var(--scale));
-        opacity: 0;
-      }
-  
-      10% {
-        opacity: 1;
-      }
-  
-      90% {
-        opacity: 1;
-      }
-  
-      100% {
-        transform: translateX(calc(100% - var(--start-pos))) scale(var(--scale));
-        opacity: 0;
-      }
-    }
-  
-    .cloud {
-      animation: InitialMoveCloud, MoveFullCloud;
-      animation-duration: var(--initial-duration), var(--duration);
-      animation-iteration-count: 1, infinite;
-      animation-delay: 0s, var(--initial-duration);
-      animation-fill-mode: forwards, none;
-      animation-timing-function: linear, linear;
+
+    40% {
+      transform: translateY(-25px);
     }
   }
+
+  #orangeboi {
+    transition: all 1s;
+    transform: translateY(0);
+  }
+  #orangeboi.jump {
+    animation: Jumping 0.5s infinite;
+  }
+
+
+
+  @keyframes InitialMoveCloudLighthouse {
+    0% {
+      transform: translateX(0%) scale(var(--scale));
+      opacity: 0;
+    }
+
+    10% {
+      opacity: var(--opacity);
+    }
+    90% {
+      opacity: var(--opacity);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(calc(125% - var(--start-pos)));
+    }
+  }
+
+  @keyframes MoveFullCloudLighthouse {
+    0% {
+      transform: translateX(calc(-1 * var(--start-pos) - 40%));
+      opacity: 0;
+    }
+
+    10% {
+      opacity: var(--opacity);
+    }
+
+    90% {
+      opacity: var(--opacity);
+    }
+
+    100% {
+      transform: translateX(calc(125% - var(--start-pos)));
+      opacity: 0;
+    }
+  }
+
+  .cloud {
+    animation: InitialMoveCloudLighthouse, MoveFullCloudLighthouse;
+    animation-duration: var(--initial-duration), var(--duration);
+    animation-iteration-count: 1, infinite;
+    animation-delay: 0s, var(--initial-duration);
+    animation-fill-mode: forwards, none;
+    animation-timing-function: linear, linear;
+  }
+
+  #cloud3 {
+    --opacity: 0.7;
+  }
+
+  // @keyframes ShiningLight1 {
+  //   0%, 100% {
+  //     transform: rotate(0deg);
+  //   }
+    
+  //   50% {
+  //     transform: rotate(10deg);
+  //   }
+  // } 
+
+  // #lightray1 {
+  //   transform-box: fill-box;
+  //   transform-origin: bottom right;
+  //   animation: ShiningLight2 5s infinite;
+  // }
+
+  // @keyframes ShiningLight2 {
+  //   0%, 100% {
+  //     transform: rotate(0deg);
+  //   }
+    
+  //   50% {
+  //     transform: rotate(-10deg);
+  //   }
+  // } 
+
+  // #lightray2 {
+  //   transform-box: fill-box;
+  //   transform-origin: bottom right;
+  //   animation: ShiningLight1 5s infinite;
+  // }
 }

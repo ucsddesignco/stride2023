@@ -45,6 +45,20 @@ function Home() {
     document.addEventListener('scroll', handleScroll);
   }, []);
 
+  const handleMouseOver = () => {
+    const orangeBoi = document.querySelector('.card-image .lighthouse-container #orangeboi')
+    orangeBoi.classList.add('jump');
+  }
+
+  const handleMouseLeave =() => {
+    const orangeBoi = document.querySelector('.card-image .lighthouse-container #orangeboi')
+    const removeJump = () => {
+      orangeBoi.classList.remove('jump')
+      orangeBoi.removeEventListener('animationiteration', removeJump)
+     }
+   orangeBoi.addEventListener('animationiteration', removeJump ) 
+  }
+
   return (
     <main className="home-page">
       <div className="hero-container">
@@ -63,7 +77,7 @@ function Home() {
             <h3>What is stride <br/> about?</h3>
             <p>Learn more →</p>
           </Link>
-          <Link to="/companies" className="card">
+          <Link to="/companies" className="card" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
             <div className='card-image'>
               <Lighthouse/>
             </div>
