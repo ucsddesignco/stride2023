@@ -113,13 +113,21 @@
     grid-auto-rows: 16vw;
     gap: 1.5rem;
 
+    a {
+    overflow:hidden;
+
+    }
     .item {
       display: flex;
       align-items: center;
       justify-content: center;
       padding: clamp(2rem, calc(5px + 2vw), 1rem);
+      transition: transform 0.3s;
+      &:is(:hover, :focus-visible) {
+        transform: scale(0.95);
+      }
       img {
-        object-fit: cover;
+        object-fit: contain;
         width: 100%;
       }
     }

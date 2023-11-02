@@ -44,7 +44,7 @@ export default function Navbar() {
             <a href="https://docs.google.com/document/d/18pBI2_xM0AN4_Gdy3LuPqXXy9NISa8Yj3DeDRbeWT-E" target='_blank' rel="noreferrer">Schedule</a>
           </li>
           <li className="register-button" onClick={() =>  {setOpen(false); document.documentElement.style.overflow = ''}}>
-            <a href="/">Register</a>
+            <a href="https://www.eventbrite.com/e/stride-2023-registration-739174008357" target='_blank' rel="noreferrer">Register</a>
           </li>
         </ul>
       </div>

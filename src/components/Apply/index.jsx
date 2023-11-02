@@ -13,7 +13,7 @@ const Apply = () => {
       <img src={Pointer} />
       <a
         className="apply-button"
-        href="https://google.com"
+        href="https://www.eventbrite.com/e/stride-2023-registration-739174008357"
         target="_blank"
         rel="noopener noreferrer"
       >
