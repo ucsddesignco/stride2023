@@ -1,6 +1,5 @@
 import './styles.scss';
 import Heart from '../../assets/footer/heart.svg';
-import Pointer from '../../assets/featuredcompanies/pointer.svg';
 
 const Footer = () => {
   return (

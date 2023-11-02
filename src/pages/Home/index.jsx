@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import HeroText from '../../components/HeroText/index';
 import FerrisWheel from '../../components/FerrisWheel';
-import Clouds from '../../svgs/Clouds/index';
 import HeroSVG from '../../svgs/HeroSVG/index';
 import './styles.scss';
 import Lighthouse from '../../components/Lighthouse';
@@ -64,7 +63,6 @@ function Home() {
       <div className="hero-container">
         <HeroText />
         <div className="hero-svg-container">
-          {/* <Clouds /> */}
           <HeroSVG />
         </div>
       </div>
