@@ -8,6 +8,7 @@ export default function NavbarSVG() {
       height="55"
       fill="none"
       viewBox="0 0 62 62"
+      className='navbarSVG'
     >
       <path
         fill="#49090B"

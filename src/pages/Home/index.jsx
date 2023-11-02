@@ -64,7 +64,7 @@ function Home() {
       <div className="hero-container">
         <HeroText />
         <div className="hero-svg-container">
-          <Clouds />
+          {/* <Clouds /> */}
           <HeroSVG />
         </div>
       </div>

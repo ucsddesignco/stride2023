@@ -71,8 +71,7 @@ nav {
       transform: translateX(0%);
     }
 
-    li a:hover::after,
-    li a:focus::after {
+    li:is(:hover, :focus-visible) a::after {
       opacity: 1;
       transform: translateX(0%);
     }
