@@ -6,6 +6,7 @@ import HeroSVG from '../../svgs/HeroSVG/index';
 import './styles.scss';
 import Lighthouse from '../../components/Lighthouse';
 import { Link } from 'react-router-dom';
+import Apply from '../../components/Apply';
 
 function Home() {
   useEffect(() => {
@@ -14,6 +15,7 @@ function Home() {
     if (window.innerWidth < 768) {
       return;
     }
+    
     let lastScrollTop = 0;
     const heroText = document.querySelector('.hero-text');
     const heroSVG = document.querySelector('.hero-svg-container');
@@ -69,7 +71,9 @@ function Home() {
             <p>Learn more →</p>
           </Link>
         </div>
+        <hr />
       </div>
+      <Apply/>
     </main>
   );
 }

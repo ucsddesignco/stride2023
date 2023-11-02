@@ -9,6 +9,10 @@
   padding-top: clamp(1rem, calc(6.5rem - 5vw), 6.5rem);
   padding-bottom: clamp(1rem, calc(6.5rem - 5vw), 6.5rem);
 
+  .apply{
+    padding-inline: calc(var(--padding) + 5vw);
+  }
+
   .featured {
     padding-inline: var(--padding);
     display: flex;

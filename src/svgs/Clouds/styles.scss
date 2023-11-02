@@ -1,6 +1,7 @@
 .cloud-container {
   --scale: 0.7;
   width: 100%;
+  opacity: 0.4;
   position: absolute;
   z-index: 1;
 
@@ -45,7 +46,7 @@
 
   .cloud {
     animation: InitialMoveCloud, MoveFullCloud;
-    animation-duration: var(--initial-duration), var(--duration);
+    animation-duration: var(--initial-duration) , var(--duration);
     animation-iteration-count: 1, infinite;
     animation-delay: 0s, var(--initial-duration);
     animation-fill-mode: forwards, none;

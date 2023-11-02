@@ -1,6 +1,11 @@
 @use '../../styles/var' as *;
 
 .home-page {
+
+  .apply{
+    padding-inline: calc(var(--padding) + 10vw);
+  }
+
   .hero-container {
     margin-top: 15px;
     position: relative;
@@ -22,16 +27,21 @@
   }
 
   .content {
-    padding-inline: calc(var(--padding) + 5vw);
+    padding-inline: calc(var(--padding) + 10vw);
 
     @media screen and (max-width: 768px) {
       margin-top: 5rem;
+      padding-inline: var(--padding);
+    }
+
+    hr {
+      border: 2px solid $primary-color;
+      margin: 8rem 0px;
     }
 
     .card-container {
       display: flex;
       gap: calc(10px + 8vw);
-      margin-bottom: 10rem;
 
       @media screen and (max-width: 768px) {
         flex-direction: column;
@@ -64,7 +74,7 @@
 
           svg {
             transition: transform 0.3s;
-            height: clamp(175px, 150px + 12vw, 400px);
+            height: clamp(120px, 100px + 12vw, 400px);
 
             @media screen and (max-width: 950px) {
               height: clamp(100px, 100px + 15vw, 300px);

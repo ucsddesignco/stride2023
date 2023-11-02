@@ -7,10 +7,10 @@ export default function Navbar() {
 
   const [open, setOpen] = useState(false);
   const checkOverflow = (open) => {
-    if (open) {
-      document.body.style.overflow = '';
+    if (!open) {
+      document.documentElement.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = '';
     }
   };
 
@@ -31,19 +31,19 @@ export default function Navbar() {
         </button>
 
         <ul >
-          <li onClick={() => setOpen(false)}>
+          <li onClick={() => {setOpen(false); document.documentElement.style.overflow = ''}}>
             <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink>
           </li>
-          <li onClick={() => setOpen(false)}>
+          <li onClick={() =>  {setOpen(false); document.documentElement.style.overflow = ''}}>
             <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>About</NavLink>
           </li>
-          <li onClick={() => setOpen(false)}>
+          <li onClick={() =>  {setOpen(false); document.documentElement.style.overflow = ''}}>
             <NavLink to="/companies" className={({ isActive }) => isActive ? "active" : ""}>Companies</NavLink>
           </li>
-          <li onClick={() => setOpen(false)}>
+          <li onClick={() =>  {setOpen(false); document.documentElement.style.overflow = ''}}>
             <a href="https://docs.google.com/document/d/18pBI2_xM0AN4_Gdy3LuPqXXy9NISa8Yj3DeDRbeWT-E" target='_blank' rel="noreferrer">Schedule</a>
           </li>
-          <li className="register-button" onClick={() => setOpen(false)}>
+          <li className="register-button" onClick={() =>  {setOpen(false); document.documentElement.style.overflow = ''}}>
             <a href="/">Register</a>
           </li>
         </ul>

@@ -12,6 +12,7 @@ import Illumina from '../../assets/featuredcompanies/companylogos/illumina.png';
 import Lighthouse from '../../components/Lighthouse';
 import { useEffect } from 'react';
 import PageHeader from '../../components/PageHeader';
+import Apply from '../../components/Apply';
 
 const FeaturedCompanies = () => {
   useEffect(() => {
@@ -53,6 +54,7 @@ const FeaturedCompanies = () => {
           </a>
         </div>
       </div>
+      <Apply/>
     </main>
   );
 };

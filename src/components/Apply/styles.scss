@@ -4,20 +4,31 @@
   display: flex;
   justify-content: space-between;
   gap: 3rem;
+  margin-bottom: 8rem;
+  width: 100%;
 
   p {
     font-family: 'NB International Mono';
-    font-size: calc(24px + 2vw);
+    font-size: calc(20px + 1.5vw);
     text-transform: uppercase;
+    line-height: 1.2em;
+    position: relative;
   }
 
   .left-content {
-    overflow: hidden;
-    white-space: nowrap;
+    align-self: flex-end;
+    @media screen and (max-width: 768px) {
+      overflow: visible;
+      white-space: normal !important;
+      p br {
+        display: none;
+      }
+    }
   }
 
-
   .right-content {
+    text-align: right;
+
     align-self: flex-end;
 
     img {
@@ -26,6 +37,47 @@
 
     a {
       text-decoration: none;
+
+      p {
+        display: inline-block;
+        overflow: hidden;
+        &:after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 0.1em;
+          background-color: $primary-color;
+          opacity: 0;
+          transition: opacity 0.3s, transform 0.3s;
+          transform: translateX(-100%);
+        }
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      p:after {
+        opacity: 1;
+        transform: translateX(0%);
+      }
+
+      @keyframes Levitate {
+        0%, 100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      img {
+        animation: Levitate 1.25s infinite ;
+      }
+    }
+
+    .now-container {
+      display: flex;
+      gap: 3rem;
     }
   }
 

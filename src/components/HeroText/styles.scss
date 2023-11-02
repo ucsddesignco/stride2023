@@ -2,14 +2,14 @@
 
 .hero-text {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: calc(10px + 4vw);
   transform: translateY(10px);
-  width: 80%;
-  margin-inline: auto;
+  width: 100%;
   transition: transform 0.8s;
   z-index: -1;
+  padding-inline: calc(var(--padding) + 10vw);
 
   svg {
     width: 45%;

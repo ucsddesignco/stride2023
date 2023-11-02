@@ -11,6 +11,7 @@ import Accordion from '../../components/Accordion';
 import AccordionData from '../../faq.json';
 import { useEffect } from 'react';
 import PageHeader from '../../components/PageHeader';
+import Apply from '../../components/Apply';
 
 const About = () => {
   useEffect(() => {
@@ -19,15 +20,6 @@ const About = () => {
 
   return (
     <main className="about-cont">
-      {/* <div className='about'>
-        <div className='text'>
-          <h1 className='header'>ABOUT <br/> STRIDE</h1>
-          <p className='description'>Stride is a uniquely design-forward career fair aiming to connect aspiring designers with company representatives. Students are encouraged to showcase their work and experience, so we recommend that you bring a physical copy of your resume!</p>
-        </div>
-        <div className='ferris-wheel'>
-          <FerrisWheel />
-        </div>
-      </div> */}
       <PageHeader
         headerText={['ABOUT', 'STRIDE']}
         desc="Stride is a uniquely design-forward career fair aiming to connect aspiring designers with company representatives. Students are encouraged to showcase their work and experience, so we recommend that you bring a physical copy of your resume!"
@@ -38,7 +30,7 @@ const About = () => {
         <img src={Domesdesktop} className="domes-desktop" />
       </div>
       <div className="opportunities">
-        <h4 className="oppor-title">Opportunities at Stride</h4>
+        <h2 className="oppor-title">Opportunities at Stride</h2>
         <div className="items">
           <div className="item">
             <img src={Iconone} />
@@ -58,6 +50,7 @@ const About = () => {
         <h3 className="faq-title">FREQUENTLY ASKED QUESTIONS</h3>
         <Accordion data={AccordionData} />
       </div>
+      <Apply/>
     </main>
   );
 };

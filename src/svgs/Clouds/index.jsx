@@ -9,7 +9,7 @@ export default function Clouds() {
       className='cloud-container'
     >
       <g>
-      <g className="cloud1 cloud" style={{'--start-pos': '0%', '--duration': '12s', '--initial-duration': '12s'}}>
+      <g className="cloud1 cloud" style={{'--start-pos': '0%', '--duration': '15s', '--initial-duration': '15s'}}>
           <mask
             id="path-3-outside-2_102_73"
             width="150"
@@ -38,7 +38,7 @@ export default function Clouds() {
             mask="url(#path-3-outside-2_102_73)"
           ></path>
         </g>
-        <g className="cloud4 cloud" style={{'--start-pos': '55%', '--duration': '12s', '--initial-duration': '5.4s'}}>
+        <g className="cloud4 cloud" style={{'--start-pos': '55%', '--duration': '15s', '--initial-duration': '6.75s'}}>
           <mask
             id="path-1-outside-1_102_73"
             width="150"
@@ -71,7 +71,7 @@ export default function Clouds() {
           ></path>
         </g>
         
-        <g className="cloud2 cloud" style={{'--start-pos': '15%', '--duration': '12s', '--initial-duration': '10.2s'}}>
+        <g className="cloud2 cloud" style={{'--start-pos': '15%', '--duration': '15s', '--initial-duration': '12.75s'}}>
           <mask
             id="path-5-outside-3_102_73"
             width="150"
@@ -100,7 +100,7 @@ export default function Clouds() {
             mask="url(#path-5-outside-3_102_73)"
           ></path>
         </g>
-        <g className="cloud3 cloud" style={{'--start-pos': '35%', '--duration': '12s', '--initial-duration': '7.8s'}}>
+        <g className="cloud3 cloud" style={{'--start-pos': '35%', '--duration': '15s', '--initial-duration': '9.75s'}}>
           <mask
             id="path-7-outside-4_102_73"
             width="151"
@@ -132,7 +132,7 @@ export default function Clouds() {
             mask="url(#path-7-outside-4_102_73)"
           ></path>
         </g>
-        <g className="cloud5 cloud" style={{'--start-pos': '65%', '--duration': '12s', '--initial-duration': '4.2s'}}>
+        <g className="cloud5 cloud" style={{'--start-pos': '65%', '--duration': '15s', '--initial-duration': '5.25s'}}>
           <mask
             id="path-9-outside-5_102_73"
             width="150"
