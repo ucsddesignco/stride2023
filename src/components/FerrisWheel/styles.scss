@@ -4,6 +4,7 @@
 
   --opacity: 0.4;
 
+
   @keyframes InitialMoveCloudFerriswheel {
     0% {
       transform: translateX(0%) scale(var(--scale));
@@ -24,7 +25,7 @@
 
   @keyframes MoveFullCloudFerriswheel {
     0% {
-      transform: translateX(calc(-1 * var(--start-pos) - 30%));
+      transform: translateX(calc(-1 * var(--start-pos) - 20%));
       opacity: 0;
     }
 
@@ -37,7 +38,7 @@
     }
 
     100% {
-      transform: translateX(calc(125% - var(--start-pos)));
+      transform: translateX(calc(110% - var(--start-pos)));
       opacity: 0;
     }
   }
