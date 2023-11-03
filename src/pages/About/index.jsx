@@ -24,7 +24,7 @@ const About = () => {
         headerText={['ABOUT', 'STRIDE']}
         desc="Stride is a uniquely design-forward career fair aiming to connect aspiring designers with company representatives. Students are encouraged to showcase their work and experience, so we recommend that you bring a physical copy of your resume!"
         svg={<FerrisWheel />}
-        note="Note: There will be a $7 fee per company info session."
+        note="Note: There will be a $7 registration fee."
       />
       <div className="domes">
         <img src={Domesmobile} className="domes-mobile" />
