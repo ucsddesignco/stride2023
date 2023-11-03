@@ -7,6 +7,11 @@
   margin-bottom: 5rem;
   padding-inline: calc(var(--padding) + 5vw);
 
+  svg {
+    overflow: visible;
+
+  }
+
   .text {
     display: flex;
     flex-direction: column;
@@ -30,9 +35,17 @@
 
     
   }
-  .svg-container svg{
-    height: clamp(250px, 225px + 12vw, 500px);
-    width: 34vw;
+
+  .svg-container {
+    div {
+      --endingPos: 90%;
+      --beginningPosOffset: 0%;
+    }
+
+    svg{
+      height: clamp(250px, 225px + 12vw, 500px);
+      width: 34vw;
+    }
   }
 
   @media screen and (max-width: 768px) {

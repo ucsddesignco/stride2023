@@ -4,6 +4,8 @@
   width: 100%;
   --scale: 1;
   --opacity: 0.4;
+  --endingPos: 110%;
+  --beginningPosOffset: 50%;
 
 
   // @keyframes Jumping {
@@ -52,13 +54,13 @@
     }
     100% {
       opacity: 0;
-      transform: translateX(calc(110% - var(--start-pos)));
+      transform: translateX(calc(var(--endingPos) - var(--start-pos)));
     }
   }
 
   @keyframes MoveFullCloudLighthouse {
     0% {
-      transform: translateX(calc(-1 * var(--start-pos) - 50%));
+      transform: translateX(calc(-1 * var(--start-pos) - 20%));
       opacity: 0;
     }
 
@@ -71,7 +73,7 @@
     }
 
     100% {
-      transform: translateX(calc(110% - var(--start-pos)));
+      transform: translateX(calc(var(--endingPos) - var(--start-pos)));
       opacity: 0;
     }
   }
