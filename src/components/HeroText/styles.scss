@@ -5,12 +5,11 @@
   justify-content: space-between;
   align-items: center;
   gap: calc(10px + 4vw);
-  transform: translateY(10px);
   width: 100%;
   transition: transform 0.8s;
   z-index: -1;
   padding-inline: calc(var(--padding) + 10vw);
-
+  margin-bottom: 1vw;
 
   svg {
     width: 45%;
@@ -31,6 +30,7 @@
   }
 
   @media screen and (max-width: 768px) {
+    margin-bottom: 0;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
