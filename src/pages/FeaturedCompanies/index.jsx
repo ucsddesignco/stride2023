@@ -9,6 +9,7 @@ import Google from '../../assets/featuredcompanies/companylogos/google.png';
 import Aops from '../../assets/featuredcompanies/companylogos/aops.png';
 import Arup from '../../assets/featuredcompanies/companylogos/arup.svg';
 import Illumina from '../../assets/featuredcompanies/companylogos/illumina.png';
+import Conote from '../../assets/featuredcompanies/companylogos/conote.png';
 import Lighthouse from '../../components/Lighthouse';
 import { useEffect } from 'react';
 import PageHeader from '../../components/PageHeader';
@@ -39,24 +40,29 @@ const FeaturedCompanies = () => {
         <h3>Recruiting & Networking:</h3>
         <div className="companies">
           
-          <a href="https://www.arup.com/" className="item" target='_blank' rel="noreferrer">
-            <img src={Arup} />
-          </a>
-          <a href="https://www.illumina.com/" className="item" target='_blank' rel="noreferrer">
-            <img src={Illumina} />
-          </a>
+          
+          
           <a href="https://artofproblemsolving.com/" className="item" target='_blank' rel="noreferrer">
             <img src={Aops} />
+          </a>
+          <a href="https://www.conote.ai/" className="item" target='_blank' rel="noreferrer">
+            <img src={Conote} />
           </a>
         </div>
         <h3>Networking Only:</h3>
 
         <div className="companies">
-        <a href="https://www.apple.com/" className="item" target='_blank' rel="noreferrer">
+          <a href="https://www.apple.com/" className="item" target='_blank' rel="noreferrer">
             <img src={Apple} />
           </a>
           <a href="https://about.google/" className="item" target='_blank' rel="noreferrer">
             <img src={Google} />
+          </a>
+          <a href="https://www.illumina.com/" className="item" target='_blank' rel="noreferrer">
+            <img src={Illumina} />
+          </a>
+          <a href="https://www.arup.com/" className="item" target='_blank' rel="noreferrer">
+            <img src={Arup} style={{padding: '25px'}}/>
           </a>
         </div>
       </div>
